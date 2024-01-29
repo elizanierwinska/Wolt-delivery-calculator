@@ -1,7 +1,7 @@
 // interface CartValueProps {}
 import '../App.css';
 import { useState } from 'react';
-import calculate from '../calculate';
+import getDeliveryFee from '../calculate';
 
 interface State {
   cartValue: number;
@@ -29,7 +29,7 @@ function CartValue() {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setDeliveryPrice(calculate(data));
+    setDeliveryPrice(getDeliveryFee(data));
   };
 
   return (
