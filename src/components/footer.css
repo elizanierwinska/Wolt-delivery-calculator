@@ -1,0 +1,24 @@
+#footer {
+  background-color: #202020;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2rem;
+  padding: 10px 0;
+}
+
+#footer > a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-family: 'Omnes', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+#footer > a:hover {
+  color: #03c2e8;
+}
