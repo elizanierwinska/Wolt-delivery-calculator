@@ -1,6 +1,6 @@
 import './header.css';
 
-function Header() {
+export default function Header() {
   console.log('I am a header');
   return (
     <header className="App-header">
@@ -9,5 +9,3 @@ function Header() {
     </header>
   );
 }
-
-export default Header;

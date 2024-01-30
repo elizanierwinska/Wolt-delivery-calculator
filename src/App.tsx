@@ -1,14 +1,14 @@
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import CartValue from './components/CartValue';
+import DeliveryFee from './components/DeliveryFee';
 
 function App() {
   return (
     <div className="body">
       <Header />
       <div id="container">
-        <CartValue />
+        <DeliveryFee />
       </div>
       <Footer />
     </div>

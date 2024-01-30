@@ -8,7 +8,7 @@ interface State {
   deliveryDistance: number;
 }
 
-function CartValue() {
+function DeliveryFee() {
   const [data, setData] = useState({
     cartValue: 0,
     deliveryDistance: 0,
@@ -44,6 +44,7 @@ function CartValue() {
             onChange={handleChange}
             name="cartValue"
             value={data.cartValue}
+            data-test-id="cartValue"
           />
           <p className="flex-unit">€</p>
         </div>
@@ -54,6 +55,7 @@ function CartValue() {
             onChange={handleChange}
             name="deliveryDistance"
             value={data.deliveryDistance}
+            data-test-id="deliveryDistance"
           />
           <p className="flex-unit">m</p>
         </div>
@@ -64,6 +66,7 @@ function CartValue() {
             onChange={handleChange}
             name="amountOfItems"
             value={data.amountOfItems}
+            data-test-id="amountOfItems"
           />
           <p className="flex-unit"></p>
         </div>
@@ -77,6 +80,7 @@ function CartValue() {
               name="time"
               onChange={handleChange}
               value={data.time}
+              data-test-id="time"
             />
             <p className="flex-unit"></p>
           </div>
@@ -93,4 +97,4 @@ function CartValue() {
   );
 }
 
-export default CartValue;
+export default DeliveryFee;
