@@ -1,4 +1,7 @@
 module.exports = {
+  moduleNameMapper: {
+    '\\.(css|sass|scss)$': 'identity-obj-proxy',
+  },
   roots: ['<rootDir>/src'],
   testMatch: [
     '**/__tests__/**/*.+(ts|tsx|js)',
@@ -7,4 +10,5 @@ module.exports = {
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
+  testEnvironment: 'jsdom',
 };

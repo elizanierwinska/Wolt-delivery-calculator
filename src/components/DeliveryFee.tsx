@@ -3,11 +3,6 @@ import '../App.css';
 import { useState } from 'react';
 import getDeliveryFee from '../calculate';
 
-interface State {
-  cartValue: number;
-  deliveryDistance: number;
-}
-
 function DeliveryFee() {
   const [data, setData] = useState({
     cartValue: 0,
@@ -18,7 +13,6 @@ function DeliveryFee() {
   const [deliveryPrice, setDeliveryPrice] = useState(0);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    // setDelivery(Number(event.target.value));
     setData((prevData) => {
       return {
         ...prevData,
@@ -44,7 +38,7 @@ function DeliveryFee() {
             onChange={handleChange}
             name="cartValue"
             value={data.cartValue}
-            data-test-id="cartValue"
+            data-testid="cartValue"
           />
           <p className="flex-unit">€</p>
         </div>
@@ -55,7 +49,7 @@ function DeliveryFee() {
             onChange={handleChange}
             name="deliveryDistance"
             value={data.deliveryDistance}
-            data-test-id="deliveryDistance"
+            data-testid="deliveryDistance"
           />
           <p className="flex-unit">m</p>
         </div>
@@ -66,7 +60,7 @@ function DeliveryFee() {
             onChange={handleChange}
             name="amountOfItems"
             value={data.amountOfItems}
-            data-test-id="amountOfItems"
+            data-testid="amountOfItems"
           />
           <p className="flex-unit"></p>
         </div>
@@ -80,16 +74,21 @@ function DeliveryFee() {
               name="time"
               onChange={handleChange}
               value={data.time}
-              data-test-id="time"
+              data-testid="time"
             />
             <p className="flex-unit"></p>
           </div>
         </div>
         <div className="flex-btn">
-          <input type="submit" id="button" value="Calculate delivery price" />
+          <input
+            type="submit"
+            id="button"
+            value="Calculate delivery price"
+            data-testid="submitButton"
+          />
         </div>
       </form>
-      <p id="price">
+      <p id="price" data-testid="fee">
         Delivery price:{' '}
         {deliveryPrice % 1 !== 0 ? deliveryPrice.toFixed(2) : deliveryPrice}€
       </p>

@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing React Components should render and match the snapshot 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="flex"
+    >
+      <p
+        className="flex-title"
+        id="first"
+      >
+        Cart Value
+      </p>
+      <input
+        data-testid="cartValue"
+        name="cartValue"
+        onChange={[Function]}
+        type="number"
+        value={0}
+      />
+      <p
+        className="flex-unit"
+      >
+        €
+      </p>
+    </div>
+    <div
+      className="flex"
+    >
+      <p
+        className="flex-title"
+      >
+        Delivery distance
+      </p>
+      <input
+        data-testid="deliveryDistance"
+        name="deliveryDistance"
+        onChange={[Function]}
+        type="number"
+        value={0}
+      />
+      <p
+        className="flex-unit"
+      >
+        m
+      </p>
+    </div>
+    <div
+      className="flex"
+    >
+      <p
+        className="flex-title"
+      >
+        Amount of items
+      </p>
+      <input
+        data-testid="amountOfItems"
+        name="amountOfItems"
+        onChange={[Function]}
+        type="number"
+        value={0}
+      />
+      <p
+        className="flex-unit"
+      />
+    </div>
+    <div>
+      <div
+        className="flex"
+      >
+        <p
+          className="flex-title"
+          id="first"
+        >
+          Time
+        </p>
+        <input
+          data-testid="time"
+          name="time"
+          onChange={[Function]}
+          type="date"
+          value=""
+        />
+        <p
+          className="flex-unit"
+        />
+      </div>
+    </div>
+    <div
+      className="flex-btn"
+    >
+      <input
+        data-testid="submitButton"
+        id="button"
+        type="submit"
+        value="Calculate delivery price"
+      />
+    </div>
+  </form>
+  <p
+    data-testid="fee"
+    id="price"
+  >
+    Delivery price:
+     
+    0
+    €
+  </p>
+</div>
+`;
