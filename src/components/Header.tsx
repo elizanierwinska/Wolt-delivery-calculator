@@ -1,7 +1,6 @@
-import './header.css';
+import '../index.css';
 
 export default function Header() {
-  console.log('I am a header');
   return (
     <header className="App-header">
       <img id="logo" src="wolt-logo.png" alt="wolt company logo" />

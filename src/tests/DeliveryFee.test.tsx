@@ -20,7 +20,7 @@ const setupCartValue = () => {
 const setupDeliveryDistance = () => {
   const utils = render(defaultComponent);
   const deliveryDistanceInput =
-    screen.getByTestId<HTMLInputElement>('cartValue');
+    screen.getByTestId<HTMLInputElement>('deliveryDistance');
   return {
     deliveryDistanceInput,
     ...utils,
@@ -29,7 +29,8 @@ const setupDeliveryDistance = () => {
 
 const setupAmountOfItems = () => {
   const utils = render(defaultComponent);
-  const amountOfItemsInput = screen.getByTestId<HTMLInputElement>('cartValue');
+  const amountOfItemsInput =
+    screen.getByTestId<HTMLInputElement>('amountOfItems');
   return {
     amountOfItemsInput,
     ...utils,

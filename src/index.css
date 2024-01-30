@@ -1,1 +1,145 @@
+body {
+  margin: 0;
+  font-family: 'Omnes', sans-serif;
+}
 
+.App-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Omnes', sans-serif;
+  box-shadow: 0 2px 7px gray;
+  margin-bottom: 150px;
+}
+
+#logo {
+  margin-left: 20px;
+  height: 50px;
+  width: 50px;
+}
+
+#title {
+  margin-right: 20px;
+  /* font-style: italic; */
+  font-weight: 600;
+  color: #03c2e8;
+}
+
+::selection {
+  color: white;
+  background-color: #03c2e8;
+}
+
+#wrapping-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: -148px;
+  background-image: url('../public/background_.avif');
+  height: 900px;
+}
+
+#container {
+  padding-top: 100px;
+  height: 40%;
+  width: 80%;
+  overflow: hidden;
+  background: white;
+  border-radius: 100px;
+  padding-bottom: 20px;
+  letter-spacing: 0.01em;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  font-weight: 600;
+  color: #202020;
+}
+
+.flex > input {
+  height: 25px;
+  margin: 10px 10px;
+  width: 50%;
+  max-width: 800px;
+  min-width: 100px;
+  overflow: hidden;
+  resize: both;
+  padding: 6px 10px;
+  text-align: end;
+  border-radius: 20px;
+  border: 1px solid lightgray;
+  box-shadow: 0 2px 5px lightgray;
+}
+
+.flex > input:hover,
+.flex > input:focus {
+  outline: none;
+  border-color: #03c2e8;
+  box-shadow: 0 2px 7px #03c2e8;
+}
+
+.flex-title {
+  text-align: left;
+  width: 100px;
+}
+
+.flex-unit {
+  width: 20px;
+}
+
+.flex-btn {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#button {
+  font-size: 15px;
+  font-family: 'Omnes', sans-serif;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  background-color: #03c2e8;
+}
+
+#button:hover {
+  box-shadow: 0 2px 7px #03c2e8;
+}
+
+#price {
+  color: #202020;
+  text-align: center;
+  font-family: 'Omnes', sans-serif;
+  font-weight: 600;
+}
+
+#footer {
+  background-color: #202020;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2rem;
+  padding: 10px 0;
+}
+
+#footer > a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-family: 'Omnes', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+#footer > a:hover {
+  color: #03c2e8;
+}

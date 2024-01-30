@@ -1,46 +1,71 @@
-# Getting Started with Create React App
+# Delivery Fee Calculator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Delivery fee calculator is a tool for calculating delivery fee.
+It checks every form submit and calculate the delivery price.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
+and is created for my application to Wolt's Software Engineer Intern (2024).
 
-## Available Scripts
+## Run the App
 
 In the project directory, you can run:
 
-### `npm start`
+```sh
+npm install --legacy-peer-deps
+npm start
+```
 
-Runs the app in the development mode.\
+This will run the application in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Run the Tests
 
-### `npm test`
+Run the following command to check the unit and integration tests included for this application:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```sh
+npm test
+```
 
-### `npm run build`
+## Additional Notes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+As I only found out about this internship opportunity on Monday, Jan. 29th 2024, this application
+was made under time pressure and is imperfect.
+I made sure to include the essential application logic that fits the requirement of the tasks.
+Additionally, I would highly appreciate an opportunity to discuss with you about the project and
+your critique/review of the code so as to further improve my knowledge on writing professional code.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Generally speaking, I would pay attention to the following points if I were to deveop frontend
+application at Wolt.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Readability and Documentation
 
-### `npm run eject`
+I strive to ensure that the object naming is readable for my teammates and the code logic
+is modularized and clean for ease of maintenance and refactoring.
+The code documentation in the current application strives to comply to the JSDoc convention.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### UI Design & CSS Maintainability
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+I will collaborate with Wolt's UI/UX designers to work on the web interface to ensure it is
+user friendly. Due to time limit, I attempted to make a simple but appealing page and switched
+to focus on the TypeScript/React code to ensure that the core logic works as expected.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+I strive to maintain CSS in a scalable manner and would choose SCSS or a framework, e.g
+Tailwind CSS/Bootstrap to make the CSS more scalable and maintainable.
+For the size and scope of this project, I chose to write vanilla CSS instead.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Code Coverage
 
-## Learn More
+I have added unit tests as well as component-level end-to-end tests for the functions and logic.
+In real life, I would also strive to write additional integration tests from a backend stub server
+to frontend if applicable or whenever necessary.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Clean Git Commit History
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+I strive to maintain a clean Git practice, e.g. squash the merge/pull request or rebase the branch before a merge.
+In this project, I left the Git commits as is in case the reviewer is interested in the progression
+of my coding process.
+
+Working with Git, release, CI/CD, etc. in a professional setting is an area that I still need more exposure
+to get better at and I am eager to become an intern to further develop this area.
+
+Finally, thank you for reviewing this application. I look forward to discussing with you more in depth
+about this project.

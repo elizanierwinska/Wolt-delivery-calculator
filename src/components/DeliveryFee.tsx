@@ -1,5 +1,4 @@
-// interface CartValueProps {}
-import '../App.css';
+import '../index.css';
 import { useState } from 'react';
 import getDeliveryFee from '../calculate';
 
