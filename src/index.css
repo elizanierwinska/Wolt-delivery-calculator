@@ -3,8 +3,8 @@ body {
   font-family: 'Omnes', sans-serif;
 }
 
-
 .App-header {
+  position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,7 +20,6 @@ body {
 
 #title {
   margin-right: 20px;
-  /* font-style: italic; */
   font-weight: 600;
   color: #03c2e8;
 }
@@ -36,14 +35,15 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 900px;
+  max-height: 100vh;
+  min-height: 90vh;
 }
 
 #container {
   padding: 2%;
-  height: 40%;
+  height: 40vh;
+  min-height: 350px;
   width: 45%;
-  overflow: hidden;
   background: white;
   border-radius: 35px;
   padding-bottom: 20px;
@@ -122,6 +122,8 @@ body {
 }
 
 #footer {
+  position: sticky;
+  bottom: 0;
   background-color: #202020;
   display: flex;
   justify-content: center;
@@ -143,4 +145,10 @@ body {
 
 #footer > a:hover {
   color: #03c2e8;
+}
+
+@media (max-width: 550px) {
+  #container {
+    width: 90%;
+  }
 }

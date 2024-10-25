@@ -4,6 +4,7 @@ import DeliveryFee from '../components/DeliveryFee';
 import { act } from 'react-test-renderer';
 import '@testing-library/jest-dom';
 
+// eslint-disable-next-line testing-library/render-result-naming-convention
 const renderer = ShallowRenderer.createRenderer();
 
 const defaultComponent = <DeliveryFee />;
@@ -49,6 +50,7 @@ const setupTime = () => {
 describe('Testing React Components', () => {
   it('should render and match the snapshot', () => {
     renderer.render(defaultComponent);
+    // eslint-disable-next-line testing-library/render-result-naming-convention
     const renderedOutput = renderer.getRenderOutput();
     expect(renderedOutput).toMatchSnapshot();
   });
@@ -80,35 +82,37 @@ describe('Testing React Components', () => {
 
   test('Valid form data submit', async () => {
     const { getByTestId } = render(defaultComponent);
-    const submitButton = getByTestId('submitButton');
+    const submitButton = screen.getByTestId('submitButton');
 
+    // eslint-disable-next-line testing-library/no-unnecessary-act
     await act(async () => {
       fireEvent.click(submitButton);
     });
 
-    expect(getByTestId('cartValue')).toBeInTheDocument();
-    expect(getByTestId('deliveryDistance')).toBeInTheDocument();
-    expect(getByTestId('amountOfItems')).toBeInTheDocument();
-    expect(getByTestId('time')).toBeInTheDocument();
+    expect(screen.getByTestId('cartValue')).toBeInTheDocument();
+    expect(screen.getByTestId('deliveryDistance')).toBeInTheDocument();
+    expect(screen.getByTestId('amountOfItems')).toBeInTheDocument();
+    expect(screen.getByTestId('time')).toBeInTheDocument();
   });
 
   test('fee change', async () => {
     const { getByTestId } = render(defaultComponent);
-    const submitButton = getByTestId('submitButton');
-    const cartValue = getByTestId('cartValue');
-    const deliveryDistance = getByTestId('deliveryDistance');
-    const amountOfItems = getByTestId('amountOfItems');
-    const time = getByTestId('time');
+    const submitButton = screen.getByTestId('submitButton');
+    const cartValue = screen.getByTestId('cartValue');
+    const deliveryDistance = screen.getByTestId('deliveryDistance');
+    const amountOfItems = screen.getByTestId('amountOfItems');
+    const time = screen.getByTestId('time');
 
     fireEvent.change(cartValue, { target: { value: 2 } });
     fireEvent.change(deliveryDistance, { target: { value: 1500 } });
     fireEvent.change(amountOfItems, { target: { value: 2 } });
     fireEvent.change(time, { target: { value: '2023-12-14' } });
 
+    // eslint-disable-next-line testing-library/no-unnecessary-act
     await act(async () => {
       fireEvent.click(submitButton);
     });
 
-    expect(getByTestId('fee')).toHaveTextContent('Delivery price: 11€');
+    expect(screen.getByTestId('fee')).toHaveTextContent('Delivery price: 11€');
   });
 });
